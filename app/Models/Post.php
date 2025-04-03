@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['title', 'body', 'slug', 'postsable_id', 'postsable_type'];
+
+    // Define polymorphic relationship
+    public function postsable()
+    {
+        return $this->morphTo();
+    }
+
+    // Relationship with comments
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentsable');
+    }
+
+}
