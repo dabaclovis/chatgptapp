@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\Category;
+use App\Models\Category as ModelsCategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,5 +24,15 @@ class Post extends Model
     {
         return $this->morphMany(Comment::class, 'commentsable');
     }
+
+    // Define the polymorphic relationship
+    public function images()
+    {
+        return $this->morphOne(Image::class, 'imagesable');
+    }
+    // 
+    protected $casts = [
+        Category::class => 'string',
+    ];
 
 }

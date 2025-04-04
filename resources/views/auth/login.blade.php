@@ -4,7 +4,7 @@
 @section('content')
 <div class="container w3-padding-16 my-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card shadow">
                 <!-- Centered heading with w3-teal -->
                 <div class="card-header w3-center w3-teal w3-padding-16">

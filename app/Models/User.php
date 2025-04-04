@@ -68,5 +68,10 @@ class User extends Authenticatable
     {
         return $this->morphOne(Contact::class,'contactsable');
     }
+    //
+    public function categories()
+    {
+        return $this->morphOne(Category::class,'categoriesable');
+    }
 
 }

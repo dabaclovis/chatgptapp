@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-success shadow-sm">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
            ex-apps
